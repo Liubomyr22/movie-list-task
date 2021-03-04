@@ -5,14 +5,14 @@ import starEmptySvg from "../../assets/icons/emptyStar.svg";
 import halfFillStarSvg from "../../assets/icons/halfFillStar.svg";
 
 const SelectRating = () => {
-    const arr = [1,2,3,4,5,6,7,8,9,10]
+    const arr = [1,2,3,4,5,6,7,8,9,10] // {r: 1, checked: false}
   return <div className={s.selectRatingSize}>
        <span><input type="checkbox" /> Any rating </span>
-       {arr.map(elem => {
+       {arr.map(elem => { // elem.r, elem.checked
             return (
               <>
               <li>
-                <input type="checkbox" />
+                <input type="checkbox"  />
                 {arr.map(i => {
                   let currentStar =
                     Math.floor(elem) >= i ? filledStarSvg : starEmptySvg;
