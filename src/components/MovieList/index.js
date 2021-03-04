@@ -3,19 +3,7 @@ import InputResult from '../InputResult';
 import MovieListGenre from '../MovieListGenre';
 import MovieListInput from '../MovieListInput';
 import MovieListRating from '../MovieListRating';
-import RatingStars from '../RatingStars';
 import s from './MovieList.module.scss'
-
-
-// const MovieList = () => {
-//     return <div className={s.wrapper}>
-//         <MovieListInput />
-//         <MovieListRating />
-//         <MovieListGenre />
-//     </div>
-// }
-
-// export default MovieList;
 
 
 const MovieList = () => {
@@ -28,12 +16,12 @@ const MovieList = () => {
   ]);
   const [x, setX] = React.useState(false);
   const [search, setSearch] = React.useState("");
-  const [query, setQuery] = React.useState('');
+  // const [query, setQuery] = React.useState('');
   
   React.useEffect(() => {
   if(search.length > 0) {
     setX(true)
-  } else if(search.length == 0) {
+  } else if(search.length === 0) {
     setX(false)
   }
 },[search])
@@ -45,7 +33,7 @@ const MovieList = () => {
 
   const getSearch = e => {
     e.preventDefault();
-    setQuery(search);
+    // setQuery(search);
   };
 
   

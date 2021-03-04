@@ -4,7 +4,7 @@ import SelectRating from '../SelectRating';
 import s from './MovieListRating.module.scss'
 
 
-const MovieListRating = ({ list }) => {
+const MovieListRating = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -15,7 +15,7 @@ const MovieListRating = ({ list }) => {
           setOpen(bool => !bool);
         }}
       >
-        Rating <img src={arrow} />
+        Rating <img src={arrow} alt="arrow"/>
       </div>
       <>{open && <SelectRating />}</>
     </div>

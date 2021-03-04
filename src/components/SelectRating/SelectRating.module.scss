@@ -1,14 +1,14 @@
 .selectRatingSize {
 display:flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-between;
 width: 236px;
 height: 303px;
 margin-top: 20px;
 background: #FFFFFF;
 border: 1px solid #979797;
 box-sizing: border-box;
-z-index:999;
+z-index:12;
 li {
     list-style: none;
     width: 100%;

@@ -22,7 +22,7 @@ const SelectRating = () => {
                   ) {
                     currentStar = halfFillStarSvg;
                   }
-                  return<img key={i} src={currentStar} slt="" />;
+                  return<img key={i} src={currentStar} alt="star" />;
                 })}
                 </li>
               </>

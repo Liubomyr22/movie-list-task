@@ -20,7 +20,7 @@ const RatingStars = ({ rating }) => {
               ) {
                 currentStar = halfFillStarSvg;
               }
-              return <img key={i} src={currentStar} slt="" />;
+              return <img key={i} src={currentStar} alt="star" />;
             })}
           </>
         </div>
