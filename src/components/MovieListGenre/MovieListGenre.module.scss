@@ -1,0 +1,33 @@
+.selectGenre {
+    position: absolute;
+    width: 113px;
+    height: 50px;
+    left: 558px;
+    right: 0px;
+    top: 22px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border: 1px solid #979797;
+    border-radius: 0px;
+    }
+    
+    .titleAndArrow {
+        display:flex;
+        justify-content: space-between;
+        margin: 12px 16px;
+    }
+
+    .selectGenreSize {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left:12px;
+        width: 113px;
+        height: 151px;
+        margin-top: 20px;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-sizing: border-box;
+        z-index: 1;
+        }
+
