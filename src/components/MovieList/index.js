@@ -12,7 +12,11 @@ const entryData = [
     category: "Action",
     selected: false,
   },
-  { id: 2, title: "Focus", rating: "6.9", category: "Comedy", selected: false },
+  { id: 2,
+    title: "Focus",
+    rating: "6.9",
+    category: "Comedy",
+    selected: false },
   {
     id: 3,
     title: "The Lazarus Effect",
@@ -37,14 +41,29 @@ const entryData = [
 ];
 
 const entryCategories = [
+  { category: "Action", selected: false },
+  { category: "Comedy", selected: false },
   { category: "Drama", selected: false },
-  { category: "Everly", selected: false },
   { category: "Thriller", selected: false },
 ];
+
+const entryRating = [
+  {rating: "1", selected: false},
+  {rating: "2", selected: false},
+  {rating: "3", selected: false},
+  {rating: "4", selected: false},
+  {rating: "5", selected: false},
+  {rating: "6", selected: false},
+  {rating: "7", selected: false},
+  {rating: "8", selected: false},
+  {rating: "9", selected: false},
+  {rating: "10", selected: false},
+]
 
 const MovieList = () => {
   const [list, setList] = React.useState(entryData);
   const [categories, setCategories] = React.useState(entryCategories);
+  const [rating,setRating] = React.useState(entryRating);
 
   const [x, setX] = React.useState(false);
   const [search, setSearch] = React.useState("");
@@ -69,8 +88,8 @@ const MovieList = () => {
   };
 
   const selectedCategories = categories.filter(({ selected }) => selected).map(({  category }) => category);
-   
-  console.log({ selectedCategories });
+  const selectedRatings = rating.filter(({ selected }) => selected).map(({  rating }) => rating);
+  console.log({ selectedRatings });
 
   return (
     <>
@@ -80,15 +99,18 @@ const MovieList = () => {
           updateSearch={updateSearch}
           getSearch={getSearch}
         />
-        <MovieListRating list={list} setList={setList} />
+        <MovieListRating rating={rating} setRating={setRating} />
         <MovieListGenre list={categories} setList={setCategories} />
       </div>
       {x &&
         list
           .filter(
             (element) =>
-              element.title.includes(search) &&
-              (!selectedCategories.length || selectedCategories.includes( element.category))
+              element.title.toLowerCase().includes(search) &&
+              (!selectedRatings.length || selectedRatings.includes(element.rating)) &&
+              (!selectedCategories.length || selectedCategories.includes(element.category)) 
+              
+
           )
           .map((element) => {
             return (

@@ -1,17 +1,16 @@
-.selectGenre {
-    position: absolute;
-    z-index: 1;
-    width: 113px;
-    height: 50px;
-    left: 558px;
-    right: 0px;
-    top: 22px;
-    background: #FFFFFF;
-    mix-blend-mode: normal;
-    border: 1px solid #979797;
-    border-radius: 0px;
-    
-    }
+    .selectGenre {
+        position: absolute;
+        z-index: 1;
+        width: 113px;
+        height: 50px;
+        left: 558px;
+        right: 0px;
+        top: 22px;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        border: 1px solid #979797;
+        border-radius: 0px;
+    }       
     
     .titleAndArrow {
         display:flex;
@@ -34,10 +33,10 @@
         box-sizing: border-box;
         }
 
-.closingArea {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+    .closingArea {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }

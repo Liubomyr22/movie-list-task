@@ -4,7 +4,7 @@ import SelectRating from '../SelectRating';
 import s from './MovieListRating.module.scss'
 
 
-const MovieListRating = () => {
+const MovieListRating = ({ rating,setRating}) => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -17,7 +17,10 @@ const MovieListRating = () => {
       >
         Rating <img src={arrow} alt="arrow"/>
       </div>
-      <>{open && <SelectRating />}</>
+      <>
+      {open && <div onClick={() => setOpen(bool=> !bool)} className={s.closingArea} />}
+     {open && <SelectRating rating={rating} setRating={setRating}/>}
+     </>
     </div>
   );
 };
